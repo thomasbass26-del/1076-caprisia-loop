@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#DFD8CF">
 <title>1076 Caprisia Loop, Myrtle Beach SC | Lakefront Savannah Plan in Bella Vita | MCMT Global</title>
 <meta name="description" content="4 bed, 4 bath, 2,908 sq ft Savannah plan on a lake in Bella Vita, Carolina Forest. Rare three-car garage, main-level primary, upstairs second suite, screened porch with pergola and outdoor kitchen. $495,500. Offered by Maria Mendoza, MCMT Global Team.">
 <link rel="canonical" href="https://thomasbass26-del.github.io/1076-caprisia-loop/">
@@ -13,6 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/photos/01.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -22,25 +24,27 @@
   --ink:#1A1A1A; --gray:#7C7671;
   --serif:'Baskervville',Georgia,serif;
   --sans:'Roboto Flex','Helvetica Neue',Arial,sans-serif;
-  --gut:clamp(1.4rem,5vw,5rem);
+  --gut:clamp(1.15rem,5vw,5rem);
   --rule:1px solid rgba(26,26,26,.13);
+  --bar:0px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 body{font-family:var(--sans);font-weight:300;color:var(--ink);background:#fff;
-  font-size:clamp(1rem,.95rem + .2vw,1.06rem);line-height:1.66;overflow-x:hidden}
+  font-size:clamp(1rem,.96rem + .2vw,1.06rem);line-height:1.65;overflow-x:hidden;
+  padding-bottom:var(--bar)}
 img{display:block;max-width:100%}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--forest);outline-offset:3px}
 .wrap{max-width:1280px;margin:0 auto;padding:0 var(--gut)}
 .eyebrow{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--copper)}
 h2{font-family:var(--serif);font-weight:400;line-height:1.1;
-  font-size:clamp(1.95rem,1.3rem + 2.5vw,3.2rem);letter-spacing:-.005em}
+  font-size:clamp(1.85rem,1.3rem + 2.5vw,3.2rem);letter-spacing:-.005em}
 h3{font-family:var(--serif);font-weight:400}
 .lead{max-width:64ch;color:#4a443f}
-section{padding:clamp(3.6rem,7vw,6.8rem) 0}
+section{padding:clamp(3rem,7vw,6.8rem) 0}
 .sec-blush{background:var(--blush)}
 .sec-bone{background:var(--bone)}
 .sec-forest{background:var(--forest-deep);color:#fff}
@@ -50,145 +54,190 @@ section{padding:clamp(3.6rem,7vw,6.8rem) 0}
 /* Header */
 header{position:sticky;top:0;z-index:60;background:rgba(223,216,207,.96);
   backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,26,26,.08)}
-.hbar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.65rem var(--gut)}
-.hbar img{width:clamp(150px,19vw,220px)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem var(--gut)}
+.hbar img{width:clamp(132px,19vw,220px)}
 .hnav{display:flex;align-items:center;gap:1.8rem}
 .hnav a{font-size:.69rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
   font-weight:500;color:var(--ink);opacity:.72;transition:opacity .2s,color .2s}
 .hnav a:hover{opacity:1;color:var(--forest)}
 .btn{display:inline-block;background:var(--forest);color:#fff;text-decoration:none;
   font-size:.69rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
-  padding:.85rem 1.7rem;border:1px solid var(--forest);transition:background .22s,color .22s;cursor:pointer}
+  padding:.85rem 1.7rem;border:1px solid var(--forest);transition:background .22s,color .22s;
+  cursor:pointer;min-height:44px;text-align:center}
 .btn:hover{background:transparent;color:var(--forest)}
-@media(max-width:900px){.hnav a:not(.btn){display:none}}
+@media(max-width:960px){.hnav a:not(.btn){display:none}
+  .hnav .btn{display:none}}
+
+/* Sticky mobile CTA */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(255,255,255,.97);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(26,26,26,.14);
+  padding:.6rem var(--gut) calc(.6rem + env(safe-area-inset-bottom));
+  align-items:center;justify-content:space-between;gap:.7rem}
+.mbar .p{font-family:var(--serif);font-size:1.22rem;color:var(--forest);line-height:1.1}
+.mbar .s{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#6d665f}
+.mbar .acts{display:flex;gap:.5rem}
+.mbar a{flex:0 0 auto;padding:.7rem 1rem;font-size:.63rem;min-height:44px;
+  display:flex;align-items:center;justify-content:center}
+.mbar .call{background:#fff;color:var(--forest)}
+@media(max-width:960px){.mbar{display:flex} body{--bar:74px}}
 
 /* Hero */
-.hero{position:relative;min-height:clamp(500px,86vh,820px);display:flex;align-items:flex-end;
+.hero{position:relative;min-height:clamp(430px,80vh,820px);display:flex;align-items:flex-end;
   background:var(--ink) center/cover no-repeat}
 .hero::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(23,58,38,.3) 0%,rgba(26,26,26,0) 40%,rgba(26,26,26,.8) 100%)}
+  background:linear-gradient(180deg,rgba(23,58,38,.3) 0%,rgba(26,26,26,0) 40%,rgba(26,26,26,.82) 100%)}
 .hero-in{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;
-  padding:0 var(--gut) clamp(2.4rem,5vw,4.4rem);color:#fff}
-.hero h1{font-family:var(--serif);font-weight:400;line-height:1;margin:.6rem 0 .3rem;
-  font-size:clamp(2.3rem,1.3rem + 4.8vw,5.2rem);letter-spacing:-.018em}
-.hero .place{font-size:clamp(.92rem,.88rem + .3vw,1.12rem);opacity:.88}
-.status{display:inline-flex;align-items:center;gap:.55rem;background:var(--forest);
-  padding:.42rem 1rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+  padding:0 var(--gut) clamp(1.9rem,5vw,4.4rem);color:#fff}
+.hero h1{font-family:var(--serif);font-weight:400;line-height:1;margin:.55rem 0 .3rem;
+  font-size:clamp(2.05rem,1.3rem + 4.8vw,5.2rem);letter-spacing:-.018em}
+.hero .place{font-size:clamp(.86rem,.84rem + .3vw,1.12rem);opacity:.88}
+.status{display:inline-flex;align-items:center;gap:.5rem;background:var(--forest);
+  padding:.4rem .9rem;font-size:.58rem;letter-spacing:.19em;text-transform:uppercase;font-weight:500}
 .status .dot{width:6px;height:6px;border-radius:50%;background:var(--tan)}
 
 /* Stats */
 .stats{background:var(--greige);border-bottom:1px solid rgba(26,26,26,.09)}
 .stats-in{max-width:1280px;margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:repeat(5,1fr)}
-.stat{padding:1.75rem .9rem;border-left:var(--rule)}
+.stat{padding:1.7rem .9rem;border-left:var(--rule)}
 .stat:first-child{border-left:none;padding-left:0}
-.stat .k{font-size:.58rem;letter-spacing:.21em;text-transform:uppercase;color:#6d665f;font-weight:500}
-.stat .v{font-family:var(--serif);font-size:clamp(1.3rem,1rem + 1.2vw,2.05rem);line-height:1.1;margin-top:.3rem}
+.stat .k{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:#6d665f;font-weight:500}
+.stat .v{font-family:var(--serif);font-size:clamp(1.25rem,1rem + 1.2vw,2.05rem);line-height:1.1;margin-top:.28rem}
 .stat .v small{font-family:var(--sans);font-size:.5em;letter-spacing:.08em;color:#6d665f}
 .stat--price .v{color:var(--forest)}
 @media(max-width:820px){.stats-in{grid-template-columns:repeat(2,1fr)}
-  .stat{border-left:none;border-top:var(--rule);padding:1.1rem 0}
-  .stat:nth-child(even){border-left:var(--rule);padding-left:1.1rem}
-  .stat:first-child,.stat:nth-child(2){border-top:none}}
+  .stat{border-left:none;border-top:var(--rule);padding:1rem 0}
+  .stat:nth-child(even){border-left:var(--rule);padding-left:1rem}
+  .stat:first-child,.stat:nth-child(2){border-top:none}
+  .stat:first-child{grid-column:1 / -1;border-bottom:var(--rule);padding-bottom:.9rem}}
 
 /* Intro */
-.intro{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
-.intro p+p{margin-top:1.05rem}
+.intro{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.4rem,5vw,4.5rem);align-items:start}
+.intro p+p{margin-top:1rem}
 @media(max-width:880px){.intro{grid-template-columns:1fr}}
 
-/* Signature: level stack */
-.levels{margin-top:clamp(2.2rem,4vw,3.4rem);border-top:2px solid var(--forest)}
-.lvl{display:grid;grid-template-columns:clamp(92px,12vw,160px) minmax(0,1fr);
-  gap:clamp(1.2rem,3.5vw,3rem);padding:clamp(1.8rem,3.5vw,2.9rem) 0;border-bottom:var(--rule)}
-.lvl-tag{font-size:.59rem;letter-spacing:.21em;text-transform:uppercase;font-weight:600;color:var(--forest);padding-top:.35rem}
-.lvl-tag span{display:block;font-family:var(--serif);font-size:2.2rem;line-height:1;
-  letter-spacing:0;text-transform:none;color:var(--copper);margin-bottom:.3rem}
-.lvl h3{font-size:clamp(1.3rem,1.1rem + .85vw,1.9rem);line-height:1.18;margin-bottom:.6rem}
+/* Level stack */
+.levels{margin-top:clamp(1.8rem,4vw,3.4rem);border-top:2px solid var(--forest)}
+.lvl{display:grid;grid-template-columns:clamp(78px,12vw,160px) minmax(0,1fr);
+  gap:clamp(.9rem,3.5vw,3rem);padding:clamp(1.5rem,3.5vw,2.9rem) 0;border-bottom:var(--rule)}
+.lvl-tag{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--forest);padding-top:.35rem}
+.lvl-tag span{display:block;font-family:var(--serif);font-size:1.95rem;line-height:1;
+  letter-spacing:0;text-transform:none;color:var(--copper);margin-bottom:.25rem}
+.lvl h3{font-size:clamp(1.22rem,1.1rem + .85vw,1.9rem);line-height:1.18;margin-bottom:.55rem}
 .lvl p{max-width:60ch;color:#4a443f}
-.lvl ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.05rem}
-.lvl li{font-size:.71rem;letter-spacing:.05em;padding:.42rem .9rem;background:rgba(255,255,255,.75);
+.lvl ul{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.lvl li{font-size:.7rem;letter-spacing:.04em;padding:.4rem .8rem;background:rgba(255,255,255,.75);
   border:1px solid rgba(33,95,60,.26);color:var(--forest)}
 
 /* Feature band */
-.band{position:relative;min-height:clamp(420px,66vh,660px);display:flex;align-items:center;
+.band{position:relative;min-height:clamp(400px,64vh,660px);display:flex;align-items:center;
   background:var(--ink) center/cover no-repeat}
-.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,58,38,.86) 0%,rgba(23,58,38,.55) 45%,rgba(23,58,38,.12) 100%)}
-.band-in{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;padding:0 var(--gut);color:#fff}
+.band::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(23,58,38,.9) 0%,rgba(23,58,38,.6) 50%,rgba(23,58,38,.15) 100%)}
+@media(max-width:760px){.band::after{background:linear-gradient(180deg,rgba(23,58,38,.55) 0%,rgba(23,58,38,.88) 60%)}}
+.band-in{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;padding:2.5rem var(--gut);color:#fff}
 .band-in .eyebrow{color:var(--tan)}
 .band-in h2{margin:.5rem 0 1rem;max-width:15ch}
-.band-in p{max-width:46ch;color:rgba(255,255,255,.86)}
-.band ul{list-style:none;margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.55rem;max-width:46ch}
-.band li{font-size:.71rem;letter-spacing:.05em;padding:.42rem .9rem;border:1px solid rgba(255,255,255,.4)}
+.band-in p{max-width:46ch;color:rgba(255,255,255,.88)}
+.band ul{list-style:none;margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.45rem;max-width:46ch}
+.band li{font-size:.7rem;letter-spacing:.04em;padding:.4rem .8rem;border:1px solid rgba(255,255,255,.42)}
 
-/* Gallery */
-.galhead{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:clamp(1.8rem,3.5vw,2.6rem)}
-.gal button{border:none;padding:0;background:var(--greige);aspect-ratio:3/2;overflow:hidden;
-  cursor:pointer;position:relative;display:block;width:100%}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
-.gal button:hover img{transform:scale(1.05)}
-.gal button:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-@media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}
-  .gal button:nth-child(1){grid-column:span 2;grid-row:span 1;aspect-ratio:3/2}}
-.more{margin-top:1.4rem;display:flex;justify-content:center}
+/* ── SLIDESHOW ─────────────────────────────────────────── */
+.show{margin-top:clamp(1.4rem,3vw,2.4rem)}
+.stage{position:relative;background:#131110;aspect-ratio:3/2;overflow:hidden;
+  touch-action:pan-y;user-select:none}
+@media(max-width:760px){.stage{aspect-ratio:4/3}}
+.stage img{width:100%;height:100%;object-fit:contain;opacity:1;transition:opacity .25s ease}
+.stage img.fade{opacity:0}
+.nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  background:rgba(19,17,16,.42);border:1px solid rgba(255,255,255,.35);color:#fff;
+  width:50px;height:50px;font-size:1.35rem;cursor:pointer;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:background .2s}
+.nav:hover{background:rgba(19,17,16,.75)}
+.nav.prev{left:.75rem} .nav.next{right:.75rem}
+@media(max-width:760px){.nav{width:44px;height:44px;font-size:1.2rem}
+  .nav.prev{left:.4rem} .nav.next{right:.4rem}}
+.badge{position:absolute;bottom:.75rem;left:.75rem;z-index:3;background:rgba(19,17,16,.6);
+  color:#fff;font-size:.66rem;letter-spacing:.14em;padding:.44rem .8rem;
+  font-variant-numeric:tabular-nums}
+.expand{position:absolute;bottom:.75rem;right:.75rem;z-index:3;background:rgba(19,17,16,.6);
+  border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.62rem;letter-spacing:.14em;
+  padding:.5rem .85rem;cursor:pointer;text-transform:uppercase;min-height:34px}
+.expand:hover{background:rgba(19,17,16,.85)}
+.strip{display:flex;gap:.4rem;overflow-x:auto;padding:.4rem 0 .6rem;
+  scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.strip::-webkit-scrollbar{height:4px}
+.strip::-webkit-scrollbar-thumb{background:rgba(26,26,26,.25)}
+.strip button{flex:0 0 auto;width:104px;aspect-ratio:3/2;border:none;padding:0;background:var(--greige);
+  cursor:pointer;overflow:hidden;scroll-snap-align:center;opacity:.5;transition:opacity .2s;
+  outline-offset:-2px}
+.strip button.on{opacity:1;outline:2px solid var(--forest)}
+.strip img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.strip button{width:80px}}
 
-/* Lightbox */
-.lb{position:fixed;inset:0;z-index:200;background:#131110;display:none;
-  align-items:center;justify-content:center}
-.lb.on{display:flex}
-.lb img{max-width:92vw;max-height:82vh;object-fit:contain}
-.lb-bar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;
-  align-items:center;padding:1rem 1.4rem;color:rgba(255,255,255,.8);font-size:.72rem;letter-spacing:.14em}
-.lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.28);color:#fff;width:48px;height:48px;font-size:1.3rem;cursor:pointer}
-.lb-btn:hover{background:rgba(255,255,255,.2)}
-.lb-prev{left:1.2rem} .lb-next{right:1.2rem}
-.lb-close{background:none;border:none;color:#fff;font-size:1.7rem;cursor:pointer;line-height:1}
+/* Fullscreen */
+.stage.full{position:fixed;inset:0;z-index:210;aspect-ratio:auto;background:#0d0c0b}
+.stage.full img{object-fit:contain}
+body.locked{overflow:hidden}
 
 /* Features */
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;
-  margin-top:clamp(2rem,4vw,3rem);border-top:var(--rule)}
-.feat div{padding:1.5rem 1.6rem 1.5rem 0;border-bottom:var(--rule)}
-.feat dt{font-size:.58rem;letter-spacing:.21em;text-transform:uppercase;color:#6d665f;font-weight:500}
-.feat dd{font-family:var(--serif);font-size:1.35rem;margin-top:.25rem;line-height:1.2}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;
+  margin-top:clamp(1.6rem,4vw,3rem);border-top:var(--rule)}
+.feat div{padding:1.15rem 1.5rem 1.15rem 0;border-bottom:var(--rule)}
+.feat dt{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:#6d665f;font-weight:500}
+.feat dd{font-family:var(--serif);font-size:1.3rem;margin-top:.2rem;line-height:1.2}
 
 /* Amenities */
-.amen{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.16);margin-top:clamp(2rem,4vw,3rem)}
-.amen div{background:var(--forest-deep);padding:1.6rem 1.4rem}
-.amen h4{font-family:var(--serif);font-weight:400;font-size:1.18rem;margin-bottom:.35rem}
-.amen p{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.55}
+.amen{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.16);margin-top:clamp(1.6rem,4vw,3rem)}
+.amen div{background:var(--forest-deep);padding:1.4rem 1.3rem}
+.amen h4{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin-bottom:.3rem}
+.amen p{font-size:.84rem;color:rgba(255,255,255,.7);line-height:1.55}
 @media(max-width:900px){.amen{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.amen{grid-template-columns:1fr}}
 
 /* Inquiry */
-.inq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4.5rem)}
+.inq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(1.6rem,5vw,4.5rem)}
 @media(max-width:880px){.inq{grid-template-columns:1fr}}
-.agentcard{background:#fff;padding:clamp(1.6rem,3vw,2.4rem);border:1px solid rgba(26,26,26,.12)}
-.agentcard .name{font-family:var(--serif);font-size:1.75rem;line-height:1.15;margin:.5rem 0 .1rem}
-.agentcard .role{font-size:.63rem;letter-spacing:.19em;text-transform:uppercase;color:#6d665f}
-.agentcard dl{margin-top:1.5rem;border-top:var(--rule);padding-top:1rem}
-.agentcard dt{font-size:.56rem;letter-spacing:.21em;text-transform:uppercase;color:#6d665f;margin-top:.9rem}
-.agentcard dd{font-size:.97rem;margin-top:.12rem}
+.agentcard{background:#fff;padding:clamp(1.3rem,3vw,2.4rem);border:1px solid rgba(26,26,26,.12)}
+.agentcard .name{font-family:var(--serif);font-size:1.7rem;line-height:1.15;margin:.45rem 0 .1rem}
+.agentcard .role{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#6d665f;line-height:1.5}
+.agentcard dl{margin-top:1.3rem;border-top:var(--rule);padding-top:.9rem}
+.agentcard dt{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#6d665f;margin-top:.85rem}
+.agentcard dd{font-size:.96rem;margin-top:.1rem}
 .agentcard dd a{text-decoration:none;color:var(--forest);border-bottom:1px solid rgba(33,95,60,.3)}
-form{display:grid;gap:1rem}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:600px){.row{grid-template-columns:1fr}}
-label{display:block;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#6d665f;font-weight:500;margin-bottom:.4rem}
-input,select,textarea{width:100%;font-family:var(--sans);font-size:.95rem;font-weight:300;
-  padding:.8rem .9rem;border:1px solid rgba(26,26,26,.2);background:#fff;color:var(--ink);border-radius:0}
+form{display:grid;gap:.95rem}
+fieldset{border:none;padding:0;margin:0;display:grid;gap:.95rem}
+legend{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);
+  font-weight:600;padding:0 0 .5rem;margin-top:.6rem;width:100%;border-bottom:var(--rule)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.95rem}
+@media(max-width:620px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:.57rem;letter-spacing:.19em;text-transform:uppercase;color:#6d665f;font-weight:500;margin-bottom:.35rem}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:16px;font-weight:300;
+  padding:.82rem .9rem;border:1px solid rgba(26,26,26,.2);background:#fff;color:var(--ink);
+  border-radius:0;min-height:46px;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--forest) 50%),linear-gradient(135deg,var(--forest) 50%,transparent 50%);
+  background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
 input:focus,select:focus,textarea:focus{border-color:var(--forest);outline:none}
-textarea{resize:vertical;min-height:100px}
+textarea{resize:vertical;min-height:96px}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{margin:0;font-size:.72rem;letter-spacing:.03em;text-transform:none;color:var(--ink);
+  border:1px solid rgba(26,26,26,.22);padding:.6rem .95rem;cursor:pointer;min-height:44px;
+  display:flex;align-items:center;transition:all .18s;font-weight:300}
+.chips input:checked + label{background:var(--forest);color:#fff;border-color:var(--forest)}
+.chips input:focus-visible + label{outline:2px solid var(--forest);outline-offset:2px}
 .consent{font-size:.71rem;color:#6d665f;line-height:1.5}
-.formnote{font-size:.75rem;color:var(--copper);border-left:2px solid var(--copper);padding-left:.8rem}
+.formnote{font-size:.74rem;color:var(--copper);border-left:2px solid var(--copper);padding-left:.8rem}
 
 /* Footer */
-footer{background:var(--ink);color:rgba(255,255,255,.6);padding:clamp(2.6rem,5vw,4rem) 0 2rem;font-size:.79rem;line-height:1.6}
-.frow{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.14)}
-footer img.flogo{width:205px}
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:clamp(2.2rem,5vw,4rem) 0 2rem;font-size:.78rem;line-height:1.6}
+.frow{display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:space-between;padding-bottom:1.7rem;border-bottom:1px solid rgba(255,255,255,.14)}
+footer img.flogo{width:min(205px,60vw)}
 footer a{color:rgba(255,255,255,.85)}
-.legal{margin-top:1.5rem;font-size:.69rem;color:rgba(255,255,255,.42);max-width:90ch}
-.legal p+p{margin-top:.65rem}
-.eho{display:flex;align-items:center;gap:.7rem;margin-top:1.1rem}
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.legal{margin-top:1.4rem;font-size:.67rem;color:rgba(255,255,255,.42);max-width:90ch}
+.legal p+p{margin-top:.6rem}
+.eho{display:flex;align-items:center;gap:.7rem;margin-top:1rem}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 </style>
 </head>
@@ -272,17 +321,20 @@ footer a{color:rgba(255,255,255,.85)}
   </div>
 </div>
 
-<section>
+<section id="gallery">
   <div class="wrap rv">
-    <div class="galhead">
-      <div>
-        <span class="eyebrow">Gallery</span>
-        <h2 style="margin-top:.5rem">Sixty-eight photographs.</h2>
-      </div>
-      <button class="btn" id="openAll" type="button">View all photos</button>
+    <span class="eyebrow">Gallery</span>
+    <h2 style="margin-top:.5rem">Sixty-eight photographs.</h2>
+  </div>
+  <div class="wrap show rv">
+    <div class="stage" id="stage" aria-roledescription="carousel" aria-label="Property photos">
+      <button class="nav prev" id="prev" aria-label="Previous photo">&#8249;</button>
+      <img id="mainImg" src="assets/photos/01.jpg" alt="1076 Caprisia Loop — photo 1 of 68">
+      <button class="nav next" id="next" aria-label="Next photo">&#8250;</button>
+      <div class="badge" id="badge" aria-live="polite">1 / 68</div>
+      <button class="expand" id="expand">Full screen</button>
     </div>
-    <div class="gal" id="gal"></div>
-    <div class="more"><button class="btn" id="showMore" type="button">Show all 68 photos</button></div>
+    <div class="strip" id="strip" role="tablist" aria-label="Photo thumbnails"></div>
   </div>
 </section>
 
@@ -323,14 +375,14 @@ footer a{color:rgba(255,255,255,.85)}
   </div>
 </section>
 
-<section id="tour">
+<section id="tour" class="sec-blush">
   <div class="wrap inq rv">
     <div>
       <span class="eyebrow">Your agent</span>
       <div class="agentcard" style="margin-top:1rem">
         <div class="role">Listing agent</div>
         <div class="name">Maria Mendoza</div>
-        <div class="role" style="letter-spacing:.11em">MCMT Global Team &middot; Coldwell Banker Sea Coast Advantage</div>
+        <div class="role" style="letter-spacing:.11em">MCMT Global Team<br>Coldwell Banker Sea Coast Advantage</div>
         <dl>
           <dt>Direct</dt><dd><a href="tel:+18646841337">(864) 684-1337</a></dd>
           <dt>Office</dt><dd><a href="tel:+18439034400">(843) 903-4400</a></dd>
@@ -343,43 +395,141 @@ footer a{color:rgba(255,255,255,.85)}
     </div>
     <div>
       <span class="eyebrow">Schedule a showing</span>
-      <h2 style="margin:.5rem 0 1.3rem;font-size:clamp(1.6rem,1.2rem + 1.6vw,2.5rem)">Come see the lake in person.</h2>
+      <h2 style="margin:.5rem 0 .6rem;font-size:clamp(1.55rem,1.2rem + 1.6vw,2.5rem)">Come see the lake in person.</h2>
+      <p style="color:#4a443f;margin-bottom:1.4rem;max-width:52ch">The more you tell us, the better we can prepare — and the faster we can get you in the door.</p>
       <form id="lead" action="REPLACE_WITH_ZAPIER_WEBHOOK_URL" method="POST">
-        <div class="row">
-          <div><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
-          <div><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
-        </div>
-        <div class="row">
-          <div><label for="em">Email</label><input id="em" type="email" name="email" autocomplete="email" required></div>
-          <div><label for="ph">Phone</label><input id="ph" type="tel" name="phone" autocomplete="tel" required></div>
-        </div>
-        <div><label for="when">When works for you</label>
-          <select id="when" name="timeframe">
-            <option>This week</option><option>This weekend</option>
-            <option>Next week</option><option>Just send me more information</option>
-          </select></div>
-        <div><label for="msg">Anything you want to know first</label><textarea id="msg" name="message"></textarea></div>
+
+        <fieldset>
+          <legend>Who you are</legend>
+          <div class="row">
+            <div><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
+            <div><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
+          </div>
+          <div class="row">
+            <div><label for="em">Email</label><input id="em" type="email" name="email" autocomplete="email" inputmode="email" required></div>
+            <div><label for="ph">Phone</label><input id="ph" type="tel" name="phone" autocomplete="tel" inputmode="tel" required></div>
+          </div>
+          <div>
+            <label>Best way to reach you</label>
+            <div class="chips">
+              <input type="radio" id="c1" name="contact_method" value="Call" checked><label for="c1">Call</label>
+              <input type="radio" id="c2" name="contact_method" value="Text"><label for="c2">Text</label>
+              <input type="radio" id="c3" name="contact_method" value="Email"><label for="c3">Email</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Seeing the home</legend>
+          <div class="row">
+            <div><label for="date">Preferred date</label><input id="date" type="date" name="preferred_date"></div>
+            <div><label for="time">Preferred time</label>
+              <select id="time" name="preferred_time">
+                <option value="">No preference</option>
+                <option>Morning (9–12)</option><option>Afternoon (12–4)</option>
+                <option>Evening (4–7)</option><option>Weekend only</option>
+              </select></div>
+          </div>
+          <div>
+            <label for="tourtype">How would you like to see it</label>
+            <select id="tourtype" name="tour_type">
+              <option>In person</option>
+              <option>Live video walkthrough</option>
+              <option>Either works</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where you are in the process</legend>
+          <div class="row">
+            <div><label for="timeline">Buying timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>Ready now</option><option>Within 30 days</option>
+                <option>1–3 months</option><option>3–6 months</option>
+                <option>6+ months / just looking</option>
+              </select></div>
+            <div><label for="finance">Financing</label>
+              <select id="finance" name="financing">
+                <option value="">Select one</option>
+                <option>Cash</option><option>Conventional</option>
+                <option>VA</option><option>FHA</option>
+                <option>Not sure yet</option>
+              </select></div>
+          </div>
+          <div class="row">
+            <div><label for="preapp">Pre-approved?</label>
+              <select id="preapp" name="preapproved">
+                <option value="">Select one</option>
+                <option>Yes, pre-approved</option><option>In process</option>
+                <option>Not yet — I'd like a referral</option><option>Paying cash</option>
+              </select></div>
+            <div><label for="sellfirst">Need to sell first?</label>
+              <select id="sellfirst" name="sell_first">
+                <option value="">Select one</option>
+                <option>No</option><option>Yes — and I'd like a home valuation</option>
+                <option>Yes, but it's already listed</option><option>Undecided</option>
+              </select></div>
+          </div>
+          <div>
+            <label for="agent">Are you working with a real estate agent?</label>
+            <select id="agent" name="has_agent">
+              <option value="">Select one</option>
+              <option>No, not currently</option>
+              <option>Yes, I have an agent</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anything else</legend>
+          <div>
+            <label>What matters most to you here</label>
+            <div class="chips">
+              <input type="checkbox" id="i1" name="interests" value="Lake view"><label for="i1">Lake view</label>
+              <input type="checkbox" id="i2" name="interests" value="Three-car garage"><label for="i2">3-car garage</label>
+              <input type="checkbox" id="i3" name="interests" value="Second suite upstairs"><label for="i3">Second suite</label>
+              <input type="checkbox" id="i4" name="interests" value="Outdoor living"><label for="i4">Outdoor living</label>
+              <input type="checkbox" id="i5" name="interests" value="Main-level living"><label for="i5">One-floor living</label>
+              <input type="checkbox" id="i6" name="interests" value="Bella Vita amenities"><label for="i6">Community amenities</label>
+            </div>
+          </div>
+          <div><label for="heard">How did you find this home</label>
+            <select id="heard" name="heard_about">
+              <option value="">Select one</option>
+              <option>Google or AI search</option><option>Social media</option>
+              <option>Drove by / sign</option><option>Referral</option>
+              <option>Zillow or Realtor.com</option><option>Other</option>
+            </select></div>
+          <div><label for="msg">Questions for Maria</label><textarea id="msg" name="message" placeholder="HOA dues, schools, flood zone, anything at all."></textarea></div>
+        </fieldset>
+
         <input type="hidden" name="source" value="Listing Site — 1076 Caprisia Loop">
         <input type="hidden" name="property" value="1076 Caprisia Loop, Myrtle Beach, SC 29579">
+        <input type="hidden" name="list_price" value="495500">
         <input type="hidden" name="mls" value="2604463">
         <input type="hidden" name="utm_source" id="h_src">
         <input type="hidden" name="utm_medium" id="h_med">
         <input type="hidden" name="utm_campaign" id="h_cmp">
         <input type="hidden" name="page_url" id="h_url">
         <input type="hidden" name="referrer" id="h_ref">
-        <p class="consent">By submitting, you agree that the MCMT Global Team may contact you about this property by phone, text, or email. Consent is not a condition of purchase.</p>
-        <button type="submit" class="btn" style="justify-self:start;padding:1rem 2.3rem">Request a showing</button>
-        <p class="formnote">Setup: point <code>action</code> at a Zapier catch hook that creates the lead in Follow Up Boss. The hidden fields carry source and campaign so attribution lands on the record at creation.</p>
+        <input type="hidden" name="photos_viewed" id="h_photos" value="0">
+
+        <p class="consent">By submitting, you agree that the MCMT Global Team may contact you about this property by phone, text, or email. Consent is not a condition of purchase. If you are already represented by a real estate agent, this is not a solicitation.</p>
+        <button type="submit" class="btn" style="justify-self:start;padding:1.05rem 2.4rem">Request a showing</button>
+        <p class="formnote">Setup: point <code>action</code> at a Zapier catch hook that creates the lead in Follow Up Boss. Hidden fields carry source, campaign, and how many photos they viewed before converting.</p>
       </form>
     </div>
   </div>
 </section>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo gallery">
-  <div class="lb-bar"><span id="lbCount"></span><button class="lb-close" id="lbClose" aria-label="Close gallery">&times;</button></div>
-  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
-  <img id="lbImg" src="" alt="">
-  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+<div class="mbar">
+  <div><div class="s">Offered at</div><div class="p">$495,500</div></div>
+  <div class="acts">
+    <a class="btn call" href="tel:+18646841337">Call</a>
+    <a class="btn" href="#tour">Schedule</a>
+  </div>
 </div>
 
 <footer>
@@ -399,7 +549,7 @@ footer a{color:rgba(255,255,255,.85)}
     <div class="eho">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.4" aria-hidden="true">
         <path d="M3 10.5 12 4l9 6.5"/><path d="M5.5 10v9h13v-9"/><path d="M9.5 19v-5h5v5"/></svg>
-      <span style="font-size:.69rem;color:rgba(255,255,255,.5)">Equal Housing Opportunity</span>
+      <span style="font-size:.68rem;color:rgba(255,255,255,.5)">Equal Housing Opportunity</span>
     </div>
     <div class="legal">
       <p>Courtesy of CB Sea Coast Advantage CF. Listing contact office: (843) 903-4400. The property information herein is derived from various sources that may include, but not be limited to, county records and the Multiple Listing Service, and it may include approximations. Although the information is believed to be accurate, it is not warranted and you should not rely upon it without personal verification. Square footage is approximate and should be independently verified.</p>
@@ -410,57 +560,80 @@ footer a{color:rgba(255,255,255,.85)}
 </footer>
 
 <script>
-const TOTAL = 68;
-const PAD = n => String(n).padStart(2,'0');
-const CAPTION = "1076 Caprisia Loop, Myrtle Beach SC — photo";
+const TOTAL=68, PAD=n=>String(n).padStart(2,'0');
+const stage=document.getElementById('stage'), main=document.getElementById('mainImg'),
+      strip=document.getElementById('strip'), badge=document.getElementById('badge'),
+      expandBtn=document.getElementById('expand');
+let cur=1, seen=new Set([1]);
 
-/* Gallery build */
-const gal = document.getElementById('gal');
-let shown = 0;
-function addPhotos(count){
-  const frag = document.createDocumentFragment();
-  for(let i=shown+1; i<=Math.min(shown+count, TOTAL); i++){
+/* thumbnail strip */
+(function(){
+  const f=document.createDocumentFragment();
+  for(let i=1;i<=TOTAL;i++){
     const b=document.createElement('button');
-    b.type='button'; b.dataset.i=i;
-    b.setAttribute('aria-label',`Open photo ${i} of ${TOTAL}`);
-    b.innerHTML=`<img src="assets/thumbs/${PAD(i)}.jpg" alt="${CAPTION} ${i}" loading="lazy">`;
-    frag.appendChild(b);
+    b.type='button'; b.dataset.i=i; b.className=i===1?'on':'';
+    b.setAttribute('aria-label',`Photo ${i} of ${TOTAL}`);
+    b.innerHTML=`<img src="assets/thumbs/${PAD(i)}.jpg" alt="" loading="lazy" decoding="async">`;
+    f.appendChild(b);
   }
-  gal.appendChild(frag);
-  shown = Math.min(shown+count, TOTAL);
-  document.getElementById('showMore').style.display = shown>=TOTAL ? 'none' : '';
-}
-addPhotos(11);
-document.getElementById('showMore').addEventListener('click',()=>addPhotos(TOTAL));
+  strip.appendChild(f);
+})();
 
-/* Lightbox */
-const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'),
-      lbCount=document.getElementById('lbCount');
-let cur=1, lastFocus=null;
-function show(i){
+function preload(i){ if(i<1||i>TOTAL) return; const im=new Image(); im.src=`assets/photos/${PAD(i)}.jpg`; }
+
+function go(i){
   cur = i<1 ? TOTAL : (i>TOTAL ? 1 : i);
-  lbImg.src=`assets/photos/${PAD(cur)}.jpg`;
-  lbImg.alt=`${CAPTION} ${cur}`;
-  lbCount.textContent=`${cur} / ${TOTAL}`;
+  seen.add(cur);
+  main.classList.add('fade');
+  const src=`assets/photos/${PAD(cur)}.jpg`;
+  const tmp=new Image();
+  tmp.onload=()=>{ main.src=src; main.alt=`1076 Caprisia Loop — photo ${cur} of ${TOTAL}`;
+    main.classList.remove('fade'); };
+  tmp.onerror=()=>main.classList.remove('fade');
+  tmp.src=src;
+  badge.textContent=`${cur} / ${TOTAL}`;
+  strip.querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.i===cur));
+  const act=strip.querySelector('button.on');
+  if(act) act.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  const ph=document.getElementById('h_photos'); if(ph) ph.value=seen.size;
+  preload(cur+1); preload(cur-1);
 }
-function open(i){ lastFocus=document.activeElement; show(i); lb.classList.add('on');
-  document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
-function close(){ lb.classList.remove('on'); document.body.style.overflow='';
-  if(lastFocus) lastFocus.focus(); }
-gal.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) open(+b.dataset.i);});
-document.getElementById('openAll').addEventListener('click',()=>open(1));
-document.getElementById('lbClose').addEventListener('click',close);
-document.getElementById('lbPrev').addEventListener('click',()=>show(cur-1));
-document.getElementById('lbNext').addEventListener('click',()=>show(cur+1));
-lb.addEventListener('click',e=>{if(e.target===lb) close();});
+
+document.getElementById('next').addEventListener('click',()=>go(cur+1));
+document.getElementById('prev').addEventListener('click',()=>go(cur-1));
+strip.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) go(+b.dataset.i);});
+
+/* fullscreen */
+function toggleFull(){
+  const on=stage.classList.toggle('full');
+  document.body.classList.toggle('locked',on);
+  expandBtn.textContent = on ? 'Close' : 'Full screen';
+}
+expandBtn.addEventListener('click',toggleFull);
+
+/* keyboard */
 document.addEventListener('keydown',e=>{
-  if(!lb.classList.contains('on')) return;
-  if(e.key==='Escape') close();
-  if(e.key==='ArrowLeft') show(cur-1);
-  if(e.key==='ArrowRight') show(cur+1);
+  if(e.key==='Escape' && stage.classList.contains('full')) toggleFull();
+  const near = stage.classList.contains('full') ||
+    (stage.getBoundingClientRect().top < innerHeight*0.8 && stage.getBoundingClientRect().bottom > 0);
+  if(!near) return;
+  if(e.key==='ArrowRight') go(cur+1);
+  if(e.key==='ArrowLeft') go(cur-1);
 });
 
-/* Attribution */
+/* swipe */
+let sx=0, sy=0, moved=false;
+stage.addEventListener('touchstart',e=>{sx=e.touches[0].clientX; sy=e.touches[0].clientY; moved=false;},{passive:true});
+stage.addEventListener('touchmove',()=>{moved=true;},{passive:true});
+stage.addEventListener('touchend',e=>{
+  if(!moved) return;
+  const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+  if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)) go(dx<0 ? cur+1 : cur-1);
+},{passive:true});
+
+preload(2);
+
+/* attribution */
 (function(){
   const q=new URLSearchParams(location.search), set=(id,v)=>{const e=document.getElementById(id); if(e) e.value=v||'';};
   set('h_src', q.get('utm_source')||'direct');
@@ -470,14 +643,14 @@ document.addEventListener('keydown',e=>{
   set('h_ref', document.referrer||'none');
 })();
 
-/* Reveal */
+/* reveal */
 (function(){
   const els=document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){
     els.forEach(e=>e.classList.add('in')); return; }
   const io=new IntersectionObserver(en=>en.forEach(x=>{
     if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}
-  }),{threshold:.1});
+  }),{threshold:.08});
   els.forEach(e=>io.observe(e));
 })();
 document.getElementById('yr').textContent=new Date().getFullYear();
