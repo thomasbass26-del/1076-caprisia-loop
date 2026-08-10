@@ -1,35 +1,25 @@
 # 1076 Caprisia Loop — Single-Property Listing Site
 
-MCMT Global Team · Coldwell Banker Sea Coast Advantage
+Maria Mendoza · MCMT Global Team · Coldwell Banker Sea Coast Advantage
 Built by Triskope LLC
 
-## Before publishing
+Live: https://thomasbass26-del.github.io/1076-caprisia-loop/
 
-1. **Verify every figure** against CCAR MLS. All numbers live in the `LISTING`
-   object near the bottom of `index.html` and in the JSON-LD block. Aggregator
-   sources disagreed on price and square footage.
-2. Replace `REPLACE-WITH-DOMAIN` throughout `index.html`, `robots.txt`,
-   and `sitemap.xml`.
-3. Set the form `action` to the Zapier catch hook that creates the lead in
-   Follow Up Boss.
-4. Add MLS photos to `assets/` and list them in `LISTING.photos`, then set
-   `emptySlots` to 0.
-5. Confirm lat/lng from Google Maps.
+## Listing data
+Sourced from mcmtglobal.com (MLS 2604463). $495,500 · 4 bed · 4 bath ·
+2,908 heated sq ft · 3,608 total · 0.28 acres · built 2018 · Ranch · pond frontage.
+Photos (68) are MCMT's own listing photos from their Luxury Presence CDN.
 
-## Deploy (GitHub Pages)
+## Remaining setup
+1. Set the form `action` to a Zapier catch hook that creates the lead in Follow Up Boss.
+   Hidden fields already carry source, campaign, page URL, and referrer.
+2. Optional: point a custom subdomain at this repo (add a CNAME file + DNS CNAME
+   to thomasbass26-del.github.io), then update the canonical, OG, and JSON-LD URLs.
+3. Re-verify price and status against CCAR MLS before any paid promotion.
 
-```bash
-cd 1076-caprisia-loop
-git init
-git add -A
-git commit -m "1076 Caprisia Loop listing site"
-git branch -M main
-git remote add origin https://github.com/<account>/1076-caprisia-loop.git
-git push -u origin main
-```
-
-Then: repo → Settings → Pages → Source: `main` / `root`.
-
-For a custom subdomain, add a `CNAME` file containing the hostname
-(e.g. `1076caprisialoop.mcmtglobal.com`) and point a DNS CNAME record at
-`<account>.github.io`.
+## Structure
+- `index.html` — entire site (CSS + JS inline)
+- `assets/photos/` — 68 full-size images (max 1800px)
+- `assets/thumbs/` — 68 thumbnails (max 700px)
+- `assets/logo-dark.png` / `logo-light.png` — MCMT lockup
+- `llms.txt`, `robots.txt`, `sitemap.xml` — AEO / crawler layer
