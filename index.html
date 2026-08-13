@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/photos/04.jpg">
+<link rel="preload" as="image" href="assets/photos/04.jpg?v=orig1">
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -286,7 +286,7 @@ footer a{color:rgba(255,255,255,.85)}
   </div>
 </header>
 
-<div class="hero" id="top" style="background-image:url('assets/photos/04.jpg')">
+<div class="hero" id="top" style="background-image:url('assets/photos/04.jpg?v=orig1')">
   <div class="hero-in">
     <span class="status"><span class="dot"></span>Price Improved · Bella Vita</span>
     <h1>1076 Caprisia Loop</h1>
@@ -343,7 +343,7 @@ footer a{color:rgba(255,255,255,.85)}
   </div>
 </section>
 
-<div class="band" id="outdoor" style="background-image:url('assets/photos/05.jpg')">
+<div class="band" id="outdoor" style="background-image:url('assets/photos/05.jpg?v=orig1')">
   <div class="band-in rv">
     <span class="eyebrow">Outdoor living</span>
     <h2>The part you'll actually use.</h2>
@@ -360,7 +360,7 @@ footer a{color:rgba(255,255,255,.85)}
   <div class="wrap show rv">
     <div class="stage" id="stage" aria-roledescription="carousel" aria-label="Property photos">
       <button class="nav prev" id="prev" aria-label="Previous photo">&#8249;</button>
-      <img id="mainImg" src="assets/photos/01.jpg" alt="1076 Caprisia Loop — photo 1 of 68">
+      <img id="mainImg" src="assets/photos/01.jpg?v=orig1" alt="1076 Caprisia Loop — photo 1 of 68">
       <button class="nav next" id="next" aria-label="Next photo">&#8250;</button>
       <div class="badge" id="badge" aria-live="polite">1 / 68</div>
       <button class="expand" id="expand">Full screen</button>
@@ -610,13 +610,13 @@ let cur=1, seen=new Set([1]);
   strip.appendChild(f);
 })();
 
-function preload(i){ if(i<1||i>TOTAL) return; const im=new Image(); im.src=`assets/photos/${PAD(i)}.jpg`; }
+function preload(i){ if(i<1||i>TOTAL) return; const im=new Image(); im.src=`assets/photos/${PAD(i)}.jpg?v=orig1`; }
 
 function go(i){
   cur = i<1 ? TOTAL : (i>TOTAL ? 1 : i);
   seen.add(cur);
   main.classList.add('fade');
-  const src=`assets/photos/${PAD(cur)}.jpg`;
+  const src=`assets/photos/${PAD(cur)}.jpg?v=orig1`;
   const tmp=new Image();
   tmp.onload=()=>{ main.src=src; main.alt=`1076 Caprisia Loop — photo ${cur} of ${TOTAL}`;
     main.classList.remove('fade'); };
