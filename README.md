@@ -1,25 +1,21 @@
 # 1076 Caprisia Loop — Single-Property Listing Site
 
 Maria Mendoza · MCMT Global Team · Coldwell Banker Sea Coast Advantage
-Built by Triskope LLC
+Built by Triskope LLC · https://thomasbass26-del.github.io/1076-caprisia-loop/
 
-Live: https://thomasbass26-del.github.io/1076-caprisia-loop/
-
-## Listing data
-Sourced from mcmtglobal.com (MLS 2604463). $495,500 · 4 bed · 4 bath ·
-2,908 heated sq ft · 3,608 total · 0.28 acres · built 2018 · Ranch · pond frontage.
-Photos (68) are MCMT's own listing photos from their Luxury Presence CDN.
+## Media
+- 77 photographs, from the photographer's 3000px print originals, served at 2000px
+- Video: hero loop (silent, 8s), full tour (71s), vertical tour (46s) — encoded from
+  the branded 1080p masters supplied in the photographer package
 
 ## Remaining setup
 1. Set the form `action` to a Zapier catch hook that creates the lead in Follow Up Boss.
-   Hidden fields already carry source, campaign, page URL, and referrer.
-2. Optional: point a custom subdomain at this repo (add a CNAME file + DNS CNAME
-   to thomasbass26-del.github.io), then update the canonical, OG, and JSON-LD URLs.
-3. Re-verify price and status against CCAR MLS before any paid promotion.
+2. Confirm the open house date/time against CCAR MLS (banner + Event schema).
+3. Optional: point a subdomain at this repo. Add a CNAME file ONLY after the DNS
+   record exists and resolves — adding it early breaks the github.io URL.
 
 ## Structure
-- `index.html` — entire site (CSS + JS inline)
-- `assets/photos/` — 68 full-size images (max 1800px)
-- `assets/thumbs/` — 68 thumbnails (max 700px)
-- `assets/logo-dark.png` / `logo-light.png` — MCMT lockup
+- `index.html` — entire site, CSS and JS inline
+- `assets/photos/` `assets/thumbs/` — 77 frames each
+- `assets/video/` — hero loop, tour, vertical tour, posters
 - `llms.txt`, `robots.txt`, `sitemap.xml` — AEO / crawler layer
