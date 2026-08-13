@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/video/poster-hero.jpg">
+<link rel="preload" as="image" href="assets/video/poster-hero-v2.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -299,9 +299,9 @@ footer a{color:rgba(240,237,232,.9)}
 <div class="hero" id="top">
   <video id="heroVid" autoplay muted loop playsinline webkit-playsinline
          disablepictureinpicture preload="auto"
-         poster="assets/video/poster-hero.jpg" aria-hidden="true">
-    <source src="assets/video/hero-loop-sm.mp4" type="video/mp4" media="(max-width: 820px)">
-    <source src="assets/video/hero-loop.mp4" type="video/mp4">
+         poster="assets/video/poster-hero-v2.jpg" aria-hidden="true">
+    <source src="assets/video/hero-loop-sm-v2.mp4" type="video/mp4" media="(max-width: 820px)">
+    <source src="assets/video/hero-loop-v2.mp4" type="video/mp4">
   </video>
   <div class="hero-in">
     <span class="label">Bella Vita &nbsp;·&nbsp; Carolina Forest</span>
@@ -723,7 +723,7 @@ addEventListener('scroll', onScroll, {passive:true}); onScroll();
   const v=document.getElementById('heroVid'), hero=document.querySelector('.hero');
   if(!v) return;
   const still=()=>{ v.remove();
-    hero.style.background="#0E1A14 url('assets/video/poster-hero.jpg') center/cover no-repeat"; };
+    hero.style.background="#0E1A14 url('assets/video/poster-hero-v2.jpg') center/cover no-repeat"; };
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){ still(); return; }
   const tryPlay=()=>{ const pr=v.play(); if(pr&&pr.catch) pr.catch(()=>{}); };
   tryPlay();
