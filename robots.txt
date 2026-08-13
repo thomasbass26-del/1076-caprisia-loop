@@ -13,4 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://thomasbass26-del.github.io/1076-caprisia-loop/1076-caprisia-loop/sitemap.xml
+Sitemap: https://thomasbass26-del.github.io/1076-caprisia-loop/sitemap.xml
